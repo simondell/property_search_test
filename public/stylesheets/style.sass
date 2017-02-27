@@ -1,10 +1,31 @@
+@import 'reset.sass'
+@import 'colours.sass'
+@import 'fonts.sass'
 
-html
-  font-size: 62.5%
+$unit: 4px
+$vertical: $unit * 4
+$horizontal: $unit * 4
 
 body
-  font-family: "Lucida Grande", Helvetica, Arial, sans-serif
-  font-size: 1.4rem
+  max-width: 640px;
+  padding: $vertical $horizontal
 
-a
-  color: #00B7FF
+
+h1, a
+  color: $brandColor
+
+h1, p
+  margin-bottom: $vertical
+
+[type="text"],
+[type="submit"]
+  height: ($vertical * 2 ) - 2
+  padding: 0 $unit
+  border: 1px solid $brandColor
+  border-radius: 2px
+  font-size: 1.8rem
+
+
+[type="submit"]
+  background-color: $brandColor
+  color: white
