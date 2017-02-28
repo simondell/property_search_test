@@ -11,17 +11,31 @@ html {
 body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
   font-size: 1.6rem; }
+  @media screen and (min-width: 1250px) {
+    body {
+      font-size: 1.92rem; } }
 
 body {
-  max-width: 640px;
   padding: 16px 16px;
   color: #303030; }
+  @media screen and (min-width: 640px) {
+    body {
+      padding: 24px 24px; } }
+  @media screen and (min-width: 1250px) {
+    body {
+      padding: 32px 32px; } }
 
 a {
   color: #5d1760; }
 
 h1, p {
   margin-bottom: 16px; }
+  @media screen and (min-width: 640px) {
+    h1, p {
+      margin-bottom: 24px; } }
+  @media screen and (min-width: 1250px) {
+    h1, p {
+      margin-bottom: 32px; } }
 
 [type="text"],
 [type="submit"] {
@@ -36,32 +50,76 @@ h1, p {
   color: white; }
 
 .property {
+  display: flex;
+  flex-flow: column nowrap;
   margin-bottom: 32px; }
   .property > img {
-    width: 100%; }
+    width: 100%;
+    margin-bottom: 8px; }
   .property h2 {
     margin-bottom: 16px; }
   .property h2 > span {
     display: block;
     color: #d54f18; }
+  @media screen and (min-width: 640px) {
+    .property {
+      flex-flow: row wrap;
+      margin-bottom: 48px; }
+      .property > img, .property div {
+        box-sizing: border-box;
+        flex: 1 50%;
+        margin-bottom: 24px; }
+      .property > img {
+        padding-right: 12px; }
+      .property div {
+        padding-left: 12px; }
+      .property footer {
+        flex: 1 100%; } }
+  @media screen and (min-width: 1250px) {
+    .property {
+      margin-bottom: 64px;
+      flex-flow: row nowrap; }
+      .property > img, .property div {
+        flex: 1 auto;
+        padding: 0;
+        margin-right: 32px; }
+      .property footer {
+        flex: 1 auto; } }
 
 .h-card {
   display: flex;
   flex-flow: column nowrap;
-  justify-content: flow-start;
+  justify-content: flex-start;
   align-items: left;
   padding: 8px 8px 16px;
   line-height: 1.5;
-  font-size: 1.2rem;
+  font-size: 0.75em;
   background-color: #e5e5e5;
   color: #858585; }
+  .h-card * {
+    margin-right: 24px; }
+  @media screen and (min-width: 640px) {
+    .h-card {
+      flex-flow: row nowrap;
+      align-items: center;
+      width: 100%;
+      padding-bottom: 8px; } }
+  @media screen and (min-width: 1250px) {
+    .h-card {
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: left;
+      width: 260px; }
+      .h-card * {
+        margin-bottom: 8px; } }
 
 .u-logo {
   margin-bottom: 8px; }
-
-.p-name::after,
-.p-street-address::after,
-.p-postal-code::after {
-  content: ', '; }
+  @media screen and (min-width: 640px) {
+    .u-logo {
+      margin-bottom: 0; } }
+  @media screen and (min-width: 640px) {
+    .u-logo {
+      margin-bottom: 8px; } }
 
 /*# sourceMappingURL=style.css.map */

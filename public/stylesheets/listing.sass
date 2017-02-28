@@ -1,28 +1,68 @@
 .property
+  display: flex
+  flex-flow: column nowrap
   margin-bottom: $vertical * 2
   > img
     width: 100%
+    margin-bottom: $vertical / 2
   h2
     margin-bottom: $vertical
   h2 > span
     display: block
     color: $red
+  @include bp(tablet)
+    flex-flow: row wrap
+    margin-bottom: $vertical * 3
+    > img, div
+      box-sizing: border-box
+      flex: 1 50%
+      margin-bottom: $vertical * 1.5
+    > img
+      padding-right: $horizontal * 0.75
+    div
+      padding-left: $horizontal * 0.75
+    footer
+      flex: 1 100%
+  @include bp(desktop)
+    margin-bottom: $vertical * 4
+    flex-flow: row nowrap
+    > img, div
+      flex: 1 auto
+      padding: 0
+      margin-right: $horizontal * 2
+    footer
+      flex: 1 auto
+
+
 
 .h-card
   display: flex
   flex-flow: column nowrap
-  justify-content: flow-start
+  justify-content: flex-start
   align-items: left
   padding: $unit * 2 $unit * 2 $unit * 4
   line-height: 1.5
-  font-size: 1.2rem
+  font-size: 0.75em
   background-color: $panelGrey
   color: $readableGrey
+  *
+    margin-right: $horizontal * 1.5
+  @include bp(tablet)
+    flex-flow: row nowrap
+    align-items: center
+    width: 100%
+    padding-bottom: $unit * 2
+  @include bp(desktop)
+    flex-flow: column nowrap
+    justify-content: flex-start
+    align-items: left
+    width: 260px
+    *
+      margin-bottom: $vertical / 2
 
 .u-logo
   margin-bottom: $unit * 2
-
-.p-name::after,
-.p-street-address::after,
-.p-postal-code::after
-  content: ', '
+  @include bp(tablet)
+    margin-bottom: 0
+  @include bp(tablet)
+    margin-bottom: $unit * 2

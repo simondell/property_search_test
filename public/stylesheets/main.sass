@@ -1,10 +1,17 @@
 body
-  max-width: 640px;
   padding: $vertical $horizontal
   color: $bodyColor
+  @include bp(tablet)
+    padding: $vertical * 1.5 $horizontal * 1.5
+  @include bp(desktop)
+    padding: $vertical * 2 $horizontal * 2
 
 a
   color: $brandColor
 
 h1, p
   margin-bottom: $vertical
+  @include bp(tablet)
+    margin-bottom: $vertical * 1.5
+  @include bp(desktop)
+    margin-bottom: $vertical * 2
