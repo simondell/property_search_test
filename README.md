@@ -4,6 +4,17 @@ Create simple Node.js based application that simulates simple search for an area
 
 Please read through the test description below to fully understand what is required. All assets needed to complete this test are attached.
 
+## See the results
+
+```bash
+$ git clone git@github.com:simondell/property_search_test.git
+$ cd property_search_test
+$ npm i
+$ npm start # to start webserver, browse http://localhost:3000
+$ npm test # can also be used to run a tiny handful of tests
+```
+
+
 ## Available assets
 - JSON data that simulates output from API
 - wireframes for 3 different viewports
@@ -113,4 +124,6 @@ Feature: Search results page needs to be responsive and support 3 different view
 ```
 
 ## Final notes
-Please let us know if you liked the test and how long it took you to complete it. 
+Please let us know if you liked the test and how long it took you to complete it.
+
+I appreciated being encouraged to get the project going from node onwards. Usually my work involves adding to existing server-side or build-time code, rather than creating my own. Recently I've been using Ruby On Rails for my pet projects' back-end code, so it was good to write some "fresh" node myself for a change (not that this is particularly unique)
