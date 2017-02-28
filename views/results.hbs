@@ -1,3 +1,23 @@
-<h1>No results found</h1>
+<h1>{{#if result_count}}{{result_count}}{{else}}No{{/if}} results found</h1>
+
+{{#each listing}}
+<article class="property">
+  <img alt="" src="{{image_url}}" />
+  <div>
+    <h2>{{num_bedrooms}} Bed {{property_type}} for sale <span>{{price}}</span></h2>
+    <p>{{description}}</p>
+  </div>
+  <footer>
+    <address class="vCard">
+      <img src="{{agent_logo}}" alt="" />
+      <span>{{agent_name}}</span><br />
+      <span>{{agent_postcode}}</span><br />
+      <span>T: {{agent_phone}}</span><br />
+    </address>
+  </footer>
+</article>
+{{else}}
 <p>Enter another location and search again</p>
-{{> form }}
+{{> form action="results" }}
+
+{{/each}}
