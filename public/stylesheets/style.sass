@@ -1,31 +1,8 @@
 @import 'reset.sass'
+@import 'variables.sass'
 @import 'colours.sass'
 @import 'fonts.sass'
 
-$unit: 4px
-$vertical: $unit * 4
-$horizontal: $unit * 4
-
-body
-  max-width: 640px;
-  padding: $vertical $horizontal
-
-
-h1, h2, a
-  color: $brandColor
-
-h1, p
-  margin-bottom: $vertical
-
-[type="text"],
-[type="submit"]
-  height: ($vertical * 2 ) - 2
-  padding: 0 $unit
-  border: 1px solid $brandColor
-  border-radius: 2px
-  font-size: 1.8rem
-
-
-[type="submit"]
-  background-color: $brandColor
-  color: white
+@import 'main.sass'
+@import 'form.sass'
+@import 'listing.sass'

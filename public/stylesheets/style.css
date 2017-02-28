@@ -10,13 +10,14 @@ html {
 
 body {
   font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
-  font-size: 1.4rem; }
+  font-size: 1.6rem; }
 
 body {
   max-width: 640px;
-  padding: 16px 16px; }
+  padding: 16px 16px;
+  color: #303030; }
 
-h1, h2, a {
+a {
   color: #5d1760; }
 
 h1, p {
@@ -33,5 +34,34 @@ h1, p {
 [type="submit"] {
   background-color: #5d1760;
   color: white; }
+
+.property {
+  margin-bottom: 32px; }
+  .property > img {
+    width: 100%; }
+  .property h2 {
+    margin-bottom: 16px; }
+  .property h2 > span {
+    display: block;
+    color: #d54f18; }
+
+.h-card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flow-start;
+  align-items: left;
+  padding: 8px 8px 16px;
+  line-height: 1.5;
+  font-size: 1.2rem;
+  background-color: #e5e5e5;
+  color: #858585; }
+
+.u-logo {
+  margin-bottom: 8px; }
+
+.p-name::after,
+.p-street-address::after,
+.p-postal-code::after {
+  content: ', '; }
 
 /*# sourceMappingURL=style.css.map */

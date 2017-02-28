@@ -1,0 +1,28 @@
+.property
+  margin-bottom: $vertical * 2
+  > img
+    width: 100%
+  h2
+    margin-bottom: $vertical
+  h2 > span
+    display: block
+    color: $red
+
+.h-card
+  display: flex
+  flex-flow: column nowrap
+  justify-content: flow-start
+  align-items: left
+  padding: $unit * 2 $unit * 2 $unit * 4
+  line-height: 1.5
+  font-size: 1.2rem
+  background-color: $panelGrey
+  color: $readableGrey
+
+.u-logo
+  margin-bottom: $unit * 2
+
+.p-name::after,
+.p-street-address::after,
+.p-postal-code::after
+  content: ', '
