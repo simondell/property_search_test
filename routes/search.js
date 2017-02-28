@@ -1,7 +1,11 @@
 var data = require('../data.json');
 var express = require('express');
+var hbs = require('hbs');
+var priceFormatter = require( '../lib/priceFormatter' );
 
 var router = express.Router();
+
+hbs.registerHelper('format', priceFormatter );
 
 function pagetitle ( subtitle ) {
   return 'Zoopla - PAGE'.replace( /PAGE/, subtitle );
