@@ -10,7 +10,8 @@ Please read through the test description below to fully understand what is requi
 $ git clone git@github.com:simondell/property_search_test.git
 $ cd property_search_test
 $ npm i
-$ npm start # to start webserver, browse http://localhost:3000
+$ npm start # to start webserver, browse http://localhost:3000/search
+$ # enter "N11" into the search field to see results
 $ npm test # can also be used to run a tiny handful of tests
 ```
 
